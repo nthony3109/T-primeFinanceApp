@@ -7,7 +7,7 @@ const NavLayout = () => {
     <div>   
         <BigScreenNav />
 
-     <main className = "flex flex-col items-center    justify-center">
+     <main className = "flex flex-col items-center md:pt-28 md:pb-0 pb-20 justify-center">
       <Outlet />
     </main>
 
