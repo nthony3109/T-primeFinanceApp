@@ -4,7 +4,7 @@ import logo from '../assets/logo.png'
 import { NavLink, Outlet } from "react-router-dom";
 const BigScreenNav = () => {
   return (
-    <div className = "hidden md:block">
+    <div className = "hidden md:block fixed bg-slate-300 w-screen">
     <div className = {styles.navLayoutDiv}>
       <div className={styles.logoContainer}>
         <img src={logo} alt="logo" className='h-11 md:h-20 rounded-full -ml-2.5 md:-ml-3.5' />
