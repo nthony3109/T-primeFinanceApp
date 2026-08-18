@@ -1,0 +1,23 @@
+@reference "tailwindcss";
+
+
+.arrowUpActive {
+    @apply bg-red-100  text-red-500 rounded-full p-2 text-3xl h-10 w-10
+}
+
+
+.arrowDownActive {
+    @apply bg-green-100 text-green-500 rounded-full p-2 text-3xl h-10 w-10
+}
+
+.card {
+    @apply flex font-sans flex-row  p-4 rounded-2xl gap-0 mb-4
+}
+
+.debitDiv {
+    @apply flex flex-row items-center font-sans justify-between border-l-3 border-l-red-500 shadow-sm shadow-slate-300 m-2 gap-3 rounded-xl p-2
+}
+
+.creditDiv {
+    @apply flex flex-row items-center font-sans justify-between border-l-3 border-l-green-500 shadow-sm shadow-slate-300 m-2 gap-3 rounded-xl p-2
+}
