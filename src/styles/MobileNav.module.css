@@ -5,7 +5,7 @@
 }
 
 .nav {
-    @apply flex flex-row items-center p-4 text-lg font-bold text-slate-500 justify-between fixed bottom-0 left-0 right-0 z-50 shadow-2xl shadow-slate-500
+    @apply bg-slate-100 flex flex-row items-center p-4 text-lg font-bold text-slate-500 justify-between fixed bottom-0 left-0 right-0 z-50 shadow-2xl shadow-slate-500 
 }
 
 .link {
