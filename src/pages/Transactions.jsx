@@ -7,6 +7,12 @@ import { useState } from "react"
 
 const Transactions = ({transactions}) => {
   const [activeFilter,setActiveFilter] = useState("all")
+  const tnxComponent = {
+    "all" : All,
+    "credit" : Credits,
+    "debit" : Debits
+  }
+  const SelectedComponent = tnxComponent[activeFilter]
   return (
     <div className="bg-slate-200 font-sans h-max pt-3 w-screen">   
 
@@ -20,7 +26,7 @@ const Transactions = ({transactions}) => {
         </div>
       </div>
       
-      {/* to render the filtered below when the buttons are clicked */}
+      {/* to render the filtered below when the buttons are clicked
       { activeFilter === "all" && (
          <All transactions={transactions} />
       )
@@ -36,7 +42,9 @@ const Transactions = ({transactions}) => {
       activeFilter == "debit" && (
         <Debits transactions={transactions} />
       )
-     }
+     } */}
+
+     <SelectedComponent transactions={transactions} />
 
     </div>
   )
