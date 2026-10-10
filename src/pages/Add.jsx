@@ -1,34 +1,48 @@
 import React from 'react'
 import styles from '../styles/Add.module.css'
+import { useRef } from 'react'
 
 
 const Add = () => {
+
+  const dateRef = useRef(null);
+  const datePicker = () => {
+    dateRef.current.showPicker();
+  }
+
   return (
-    <div className ="flex flex-col items-center bg-slate-300 w-screen h-screen">   
-        <div className=" pl-2.5 pt-3 flex flex-col font-sans items-start">
+    <div className ="flex flex-col items-center bg-slate-50 w-screen h-screen">   
+        <div className=" pl-2.5 pt-3  flex flex-col font-sans items-start">
           <h1 className="font-bold text-2xl">Add Transaction</h1>
           <p className="text-sm text-slate-500 font-medium">Record an income or expense.</p>
         </div>
 
-      <form className="flex flex-col bg-slate-50 w-sm p-10 rounded-2xl index-1 translate-0.5 mt-5">
-        <label htmlFor="subject" className="font-medium text-sm">Subject</label>
-         <input id="subject" className={styles.input} type="text" placeholder="enter subject or topic" max={50} />
+      <form className="flex flex-col md:h-screen md:w-screen md:grid md:grid-cols-2 md:pl-30 md:pr-30 md:mb-0 md:pb-10 bg-slate-50 w-sm p-10 rounded-2xl  mt-5 mb-20  shadow-lg shadow-slate-300">
+        <label htmlFor="subject" className= {`${styles.label}`}>Subject</label>
+         <input id="subject" className={styles.input} type="text" placeholder="Enter subject or topic" max={50} />
 
-          <label htmlFor="description" className="font-medium text-sm">Description</label>
-         <input id="description" className={styles.input} type="text" placeholder="enter short description" max={50} />
+          <label htmlFor="description" className= {`${styles.label}`}>Description</label>
+         <input id="description" className={styles.input} type="text" placeholder="Enter short description" max={50} />
 
-         <label htmlFor="type" className="font-medium text-sm">Transaction Type</label>
-         <select id="type"className={styles.input} placeholder ="transaction type" name="type">
+         <label htmlFor="type"className= {`${styles.label}`}>Transaction Type</label>
+         <select id="type"className={styles.input} placeholder ="Transaction type" name="type">
           <option value=""> select type</option>
           <option value="CREDIT">credit</option>
           <option value="DEBIT">debit</option>
          </select>
 
-         <label htmlFor="amount" className="font-medium text-sm">Amount (₦)</label>
+         <label htmlFor="amount" className= {`${styles.label}`}>Amount (₦)</label>
          <div className="flex flex-row items-center">
-         <input id="amount" className={`${styles.input} ${styles.amountInput}`} type="number" placeholder="enter amount" /> 
+         <input id="amount" className={`${styles.input} ${styles.amountInput}`} type="number" placeholder="Enter amount" /> 
          <span className={styles.naira}>₦</span>
         </div>
+
+        <label htmlFor='date' className={styles.label} >Date</label>
+        <input type='date' id='date' onClick={datePicker} ref={dateRef} className={`${styles.input}`} />
+
+        <button type='submit' className=" block md: md:col-start-2 bg-blue-500 text-white font-bold py-2 px-4 rounded-lg mb-10  hover:bg-blue-600 transitionduration-300">Add Transaction</button>
+
+
       </form>
 
     </div>
