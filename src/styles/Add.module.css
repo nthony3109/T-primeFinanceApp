@@ -1,0 +1,41 @@
+@reference "tailwindcss";
+
+.input {
+  /* appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none; */
+
+  border: none;
+  outline: none;
+  background: none;
+
+  font: inherit;
+
+    color: inherit;
+    @apply mb-5 border border-slate-300 rounded-lg p-2 w-full;
+}
+
+.input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.input[type="number"]::-webkit-inner-spin-button,
+.input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.naira {
+  @apply text-slate-500 font-medium text-sm p-2.5
+  
+  -ml-7 flex align-middle -mt-5 border-l bg-slate-100 border-slate-300 rounded-r-lg;
+}
+
+.amountInput {
+  flex: 1;
+ padding-right: 0;
+ margin-right: 0;
+}
+.label {
+  @apply font-semibold mb-2 text-sm
+}
