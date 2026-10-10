@@ -1,10 +1,6 @@
 @reference "tailwindcss";
 
 .input {
-  /* appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none; */
-
   border: none;
   outline: none;
   background: none;
