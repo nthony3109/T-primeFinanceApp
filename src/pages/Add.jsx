@@ -26,7 +26,7 @@ const Add = () => {
 
          <label htmlFor="type"className= {`${styles.label}`}>Transaction Type</label>
          <select id="type"className={styles.input} placeholder ="Transaction type" name="type">
-          <option value=""> select type</option>
+          <option value=""> Select transaction type</option>
           <option value="CREDIT">credit</option>
           <option value="DEBIT">debit</option>
          </select>
