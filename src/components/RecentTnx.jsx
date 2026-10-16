@@ -8,9 +8,7 @@ const RecentTnx = ({transactions}) => {
     const [recentTnx, setRecentTnx] = useState([])
 
     const filterRecentTnx = () => {
-        console.log("tnx list below")
-        console.log(transactions);
-        
+
         const sortedTnx = [...transactions].sort((a, b) => new Date(b.date) - new Date(a.date));
         const recentTransactions = sortedTnx.slice(0, 4);
         setRecentTnx(recentTransactions);
@@ -44,7 +42,7 @@ const RecentTnx = ({transactions}) => {
      <div className="">
               {r.type == "debit" ?
                
-              <div className="flex flex-row items-center justify-between border-l-3 border-l-red-500 shadow-sm shadow-slate-300 m-2 gap-3 rounded-xl p-2">
+              <div className={styles.recentDebitDiv}>
                 {/* left contents and arrow */}
                 <div className="flex flex-row gap-2">
                <ArrowUpIcon className={styles.arrowUpActive} />
@@ -62,7 +60,7 @@ const RecentTnx = ({transactions}) => {
               </div>
               
                :
-               <div className="flex flex-row items-center justify-between border-l-3 border-l-green-500 shadow-sm shadow-slate-300 m-2 gap-3 rounded-xl p-2">
+               <div className={styles.recentCreditDiv}>
                 
                               {/* left contents and arrow */}
                 <div className="flex flex-row gap-2">
