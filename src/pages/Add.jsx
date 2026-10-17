@@ -1,10 +1,12 @@
 import React from 'react'
 import styles from '../styles/Add.module.css'
-import { useRef } from 'react'
+import { useRef, useReducer } from 'react'
+import { initialState } from '../hooks/initialState'
+import { reducer } from '../hooks/reducer'
 
 
 const Add = () => {
-
+const [state, dispatch] = useReducer (reducer, initialState);
   const dateRef = useRef(null);
   const datePicker = () => {
     dateRef.current.showPicker();
