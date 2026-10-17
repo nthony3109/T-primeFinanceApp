@@ -7,6 +7,17 @@ import { reducer } from '../hooks/reducer'
 
 const Add = () => {
 const [state, dispatch] = useReducer (reducer, initialState);
+
+const handleChange = (e) => {
+  const { name, value } = e.target;
+
+  dispatch({
+    type: "SET_FIELD",
+    field: name,
+    payload: value
+  });
+};
+
   const dateRef = useRef(null);
   const datePicker = () => {
     dateRef.current.showPicker();
