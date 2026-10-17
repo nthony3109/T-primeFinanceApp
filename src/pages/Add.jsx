@@ -11,13 +11,13 @@ const Add = () => {
   }
 
   return (
-    <div className ="flex flex-col items-center bg-slate-50 w-screen h-screen">   
+    <div className ="flex flex-col items-center bg-slate-200 w-screen h--max">   
         <div className=" pl-2.5 pt-3  flex flex-col font-sans items-start">
           <h1 className="font-bold text-2xl">Add Transaction</h1>
           <p className="text-sm text-slate-500 font-medium">Record an income or expense.</p>
         </div>
 
-      <form className="flex flex-col md:h-screen md:w-screen md:grid md:grid-cols-2 md:pl-30 md:pr-30 md:mb-0 md:pb-10 bg-slate-50 w-sm p-10 rounded-2xl  mt-5 mb-20  shadow-lg shadow-slate-300">
+      <form className="flex flex-col md:h-screen md:w-screen md:grid md:grid-cols-2 md:pl-30 md:pr-30 md:mb-0 md:pb-10 bg-slate-200 w-sm p-10 rounded-2xl  mt-5 mb-20  shadow-lg shadow-slate-300">
         <label htmlFor="subject" className= {`${styles.label}`}>Subject</label>
          <input id="subject" className={styles.input} type="text" placeholder="Enter subject or topic" max={50} />
 
