@@ -37,7 +37,7 @@ const Profile = () => {
         {/* the utility section of the profile page */}
         <div className= 'bg-slate-100 rounded-lg shadow-sm shadow-slate-300 p-5 m-5'>
           {/* settings */}
-          <NavLink to="" className= "flex flex-row items-center p-5 pt-0 pl-0">
+          <NavLink to="/settings" className= "flex flex-row items-center p-5 pt-0 pl-0">
             <SettingsIcon className='text-slate-600 text-[12px] font-semibold' />
               <p className='text-slate-600 text-sm font-semibold ml-1.5'>Account Settings</p>
               <ChevronRight className='text-slate-600 text-sm ml-auto sel font-semibold' />
@@ -57,7 +57,7 @@ const Profile = () => {
           <NavLink className= "flex flex-row items-center p-5 pl-0 pb-0 border-t border-slate-300 ">
              <LogOutIcon className='text-red-600 text-[12px] font-semibold' />
               <p className='text-red-600 text-sm font-semibold ml-1.5'>Logout</p>
-              <ChevronRight className='text-slate-600 text-sm ml-auto sel font-semibold' />
+              <ChevronRight className='text-slate-600 text-sm ml-auto font-semibold' />
           </NavLink>
       
         </div>
