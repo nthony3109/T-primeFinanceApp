@@ -19,7 +19,7 @@ const {handleChange, handleSubmit} = useForm(dispatch, state);
 
   return (
     <div className ="flex flex-col items-center bg-slate-200 w-screen h--max">   
-    <pre>{JSON.stringify(state, null, 2)}</pre>
+  
 
         <div className=" pl-2.5 pt-3  flex flex-col font-sans items-start">
           <h1 className="font-bold text-2xl">Add Transaction</h1>
@@ -56,7 +56,7 @@ const {handleChange, handleSubmit} = useForm(dispatch, state);
 
          <label htmlFor="type"className= {`${styles.label} `}>Transaction Type</label>
          <select id="type" name ='type' value={state.type} onChange={handleChange}
-          className={`{styles.input} ${state.errors.type ? styles.inputError : ""}`} 
+          className={`${styles.input} ${state.errors.type ? styles.inputError : ""}`} 
           placeholder ="Transaction type">
           <option value=""> Select transaction type</option>
           <option value="CREDIT">credit</option>
