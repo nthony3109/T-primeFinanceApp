@@ -56,7 +56,7 @@ const Settings = () => {
                 <ChevronRight className='text-slate-600 text-sm ml-auto sel font-semibold' />
              </NavLink>
 
-             <NavLink to="" className="flex flex-row border-t border-slate-400 items-center p-5      pl-0 ">
+             <NavLink to="/appearance" className="flex flex-row border-t border-slate-400 items-center p-5      pl-0 ">
                 <Moon size={50} className ="text-blue-600 rounded-full bg-blue-200 p-1"/>
                 <div className=' ml-5 mr-'>
                     <h1 className='font-bold text-slate-600 '>Appearance</h1>
