@@ -5,7 +5,7 @@ import { NavLink } from 'react-router-dom';
 
 const Settings = () => {
     return (
-        <div className=" h-max w-screen border border-red-500 bg-slate-200 font-sans">
+        <div className=" h-max w-screen bg-slate-200 font-sans">
           <div className=" m-5 ml-0 mt-0 flex flex-row items-center">
            <NavLink to="/profile" className="flex flex-row items-center">
             <ArrowLeft className="text-slate-600 text-lg ml-5 mr-3 font-bold" />
